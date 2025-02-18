@@ -1,13 +1,17 @@
-import './App.css';
-
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import LostItem from "./pages/LostItem";
+import FoundItem from "./pages/FoundItem";
 
 function App() {
   return (
-    <div className="container">
-      <h1 className="title">Welcome to Found-It</h1>
-      <p className="subtitle">Easily find and report lost items.</p>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/lost" element={<LostItem />} />
+        <Route path="/found" element={<FoundItem />} />
+      </Routes>
+    </Router>
   );
 }
 
