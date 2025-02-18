@@ -1,0 +1,5 @@
+•	Users can report lost items with descriptions and images.
+•	Users can report found items and search for lost ones.
+•	A matching system to suggest possible matches between lost and found items.
+•	A chat system (optional) for users to communicate.
+•	Location-based filtering (e.g., searching by city, campus, or neighborhood).

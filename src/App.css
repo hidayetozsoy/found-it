@@ -1,25 +1,22 @@
+/* General Container Styling */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   text-align: center;
-  background-color: #f9f9f9;
+  padding: 20px;
 }
 
+/* Title Styling */
 .title {
   font-size: 2rem;
   font-weight: bold;
   color: #333;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  color: #666;
   margin-bottom: 20px;
 }
 
+/* Home Page Button Styling */
 .button-container {
   display: flex;
   gap: 20px;
@@ -36,10 +33,6 @@ button {
   width: 250px;
 }
 
-button:hover {
-  opacity: 0.8;
-}
-
 .lost-button {
   background-color: #ff4d4d;
   color: white;
@@ -48,4 +41,65 @@ button:hover {
 .found-button {
   background-color: #4caf50;
   color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Form Styling (Lost & Found Item Pages) */
+.form {
+  display: flex;
+  flex-direction: column; /* Stack inputs vertically */
+  align-items: center; /* Center align inputs */
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Avoid extra width due to padding */
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Submit & Back Buttons (Lost & Found Pages) */
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.back-button {
+  margin-top: 15px;
+  background-color: #666;
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.back-button:hover {
+  background-color: #444;
 }
