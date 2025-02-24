@@ -4,20 +4,23 @@ import Home from "./pages/Home";
 import LostItem from "./pages/LostItem";
 import FoundItem from "./pages/FoundItem";
 import UserProfile from "./pages/UserProfile";
-import { Container } from "react-bootstrap";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 
 function App() {
   return (
     <Router>
       <MainNavbar />
-      <Container className="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+      <div className="container d-flex flex-column min-vh-100 justify-content-center align-items-center">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/lost" element={<LostItem />} />
           <Route path="/found" element={<FoundItem />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/:username" element={<UserProfile />} />
         </Routes>
-      </Container>
+      </div>
     </Router>
   );
 }
