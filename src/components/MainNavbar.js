@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 function MainNavbar() {
   const location = useLocation();
-
+  const isSignedIn = true;
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
@@ -20,9 +20,16 @@ function MainNavbar() {
             </Nav.Link>
           </Nav>
           <Nav className="ms-auto">
-            <Button as={Link} to="/signin" variant="outline-light">
-              Sign In
-            </Button>
+            {
+              isSignedIn ?
+                <Button as={Link} to="/signout" variant="outline-light">
+                  Sign Out
+                </Button>
+                :
+                <Button as={Link} to="/signin" variant="light">
+                  Sign In
+                </Button>
+            }
           </Nav>
         </Navbar.Collapse>
       </Container>
