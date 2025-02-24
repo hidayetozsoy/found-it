@@ -1,22 +1,20 @@
-import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import "../App.css";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="container">
+    <>
       <h1 className="title">Welcome to Found-It</h1>
       <p className="subtitle">Easily find and report lost items.</p>
-
-      <div className="button-container">
-        <Link to="/lost">
-          <Button>I Lost Something</Button>
-        </Link>
-        <Link to="/found">
-          <Button>I Found Something</Button>
-        </Link>
+      <div className="d-flex gap-2">
+        <Button as={Link} to="/lost" variant="primary">
+          I Lost Something
+        </Button>
+        <Button as={Link} to="/found" variant="success">
+          I Found Something
+        </Button>
       </div>
-    </div>
+    </>
   );
 }
 
